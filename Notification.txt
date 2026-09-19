@@ -1,0 +1,28 @@
+Table attributes:
+id
+recipient
+channel
+template
+status
+createdAt
+updatedAt
+
+
+Example (Base, phase-1 implementation):
+{
+  "id": 1,
+  "recipient": "darron@gmail.com",
+  "channel": "EMAIL",
+  "template": "LEAVE_APPROVED",
+  "status": "PENDING"
+}
+
+CREATE TABLE notifications (
+    id BIGSERIAL PRIMARY KEY,
+    recipient VARCHAR(255) NOT NULL,
+    channel VARCHAR(50) NOT NULL,
+    template TEXT NOT NULL,
+    status VARCHAR(50) NOT NULL,
+    created_at TIMESTAMP NOT NULL,
+    updated_at TIMESTAMP
+);
